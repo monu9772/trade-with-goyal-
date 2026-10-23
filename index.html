@@ -1,109 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trade With Goyal</title>
 
-  <title>Trade With Goyal | Join Telegram</title>
-  <meta name="description" content="Join Trade With Goyal on Telegram for stock market education, market updates and research.">
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;padding:20px 12px 65px;
+ font-family:Arial,Helvetica,sans-serif;
+ color:#f5f7ff;
+ background:radial-gradient(ellipse at top,#006344,#03121c 65%,#003d3d);
+ min-height:100vh
+}
+.card{
+ max-width:660px;margin:24px auto;
+ padding:42px 24px 28px;
+ border:2px solid #263c51;border-radius:44px;
+ background:linear-gradient(145deg,#071d28,#061329 75%);
+ box-shadow:0 0 40px #00dca51a;
+ text-align:center;position:relative
+}
+.logo{
+ width:220px;height:220px;margin:0 auto 25px;
+ border:7px solid #00edb1;border-radius:50%;
+ outline:3px solid #38ff9a;outline-offset:-15px;
+ background:radial-gradient(circle,#101b26,#02080d);
+ box-shadow:0 0 28px #00e9a966;
+ display:flex;align-items:center;justify-content:center;
+ position:relative
+}
+.logo-inner{font-size:55px;font-weight:900;line-height:1.05}
+.logo-inner small{display:block;font-size:12px;letter-spacing:1px}
+.check{
+ position:absolute;right:-2px;bottom:8px;
+ background:#00c979;border:5px solid #071521;
+ width:55px;height:55px;border-radius:50%;
+ display:grid;place-items:center;font-size:28px;font-weight:bold
+}
+h1{font-size:clamp(27px,6vw,38px);margin:0 0 15px;font-weight:900}
+.badge{
+ display:inline-block;border:1px solid #a98600;
+ border-radius:30px;padding:8px 20px;margin-bottom:34px;
+ background:#29291c;color:#ffca19;font-weight:900;
+ font-size:14px;letter-spacing:1.5px
+}
+.feature{
+ display:flex;gap:18px;align-items:center;text-align:left;
+ padding:20px 17px;margin:0 0 20px;
+ border:1px solid #1c3447;border-radius:27px;
+ background:#ffffff04
+}
+.icon{
+ flex-shrink:0;width:58px;height:58px;border-radius:19px;
+ background:#064638;color:#00e5a0;
+ display:grid;place-items:center;font-size:31px;font-weight:bold
+}
+.feature h3{font-size:18px;margin:0 0 6px}
+.feature p{font-size:15px;color:#96afd9;line-height:1.45;margin:0}
+.join-wrap{
+ margin:26px -7px 0;padding:17px;
+ border-radius:40px;background:#00463b
+}
+.join{
+ min-height:90px;width:100%;padding:15px 10px;
+ display:flex;align-items:center;justify-content:center;gap:13px;
+ border:4px solid white;border-radius:28px;
+ background:linear-gradient(110deg,#fff500,#f1ca00);
+ color:#050707;text-decoration:none;font-weight:900;
+ font-size:clamp(16px,4vw,24px);
+ box-shadow:0 0 8px #ffe90055
+}
+.join:active{transform:scale(.98)}
+.telegram{
+ display:grid;place-items:center;background:#050708;color:#ffe900;
+ border-radius:50%;width:42px;height:42px;flex-shrink:0;font-size:23px
+}
+.free-note{color:#8296b8;font-size:14px;margin:12px 0 32px}
+hr{border:0;border-top:1px solid #2b3b50;margin:25px 0}
+.disclaimer{
+ text-align:left;color:#879cbd;font-size:13px;line-height:1.8
+}
+.disclaimer strong{color:#c5d4ef}
+.footer{margin-top:22px;color:#ffdc61;text-decoration:underline}
+.notice{
+ max-width:580px;margin:-52px auto 0;position:relative;
+ border:1px solid #00dba1;border-radius:50px;
+ padding:15px 20px;background:#091629;
+ display:flex;align-items:center;gap:14px;
+ box-shadow:0 8px 25px #0005;font-size:14px
+}
+.notice-icon{
+ width:45px;height:45px;border-radius:50%;
+ background:#00dba1;color:#001b1a;
+ display:grid;place-items:center;font-size:23px;flex-shrink:0
+}
+.notice-time{margin-left:auto;color:#8199bb;white-space:nowrap}
+@media(max-width:420px){
+ body{padding:12px 8px 55px}
+ .card{padding:30px 16px 25px;border-radius:38px}
+ .logo{width:190px;height:190px}
+ .logo-inner{font-size:47px}
+ .badge{font-size:12px;padding:8px 12px;letter-spacing:1px}
+ .feature{gap:12px;padding:15px 12px}
+ .icon{width:49px;height:49px;font-size:26px}
+ .feature h3{font-size:16px}
+ .feature p{font-size:13px}
+ .join-wrap{padding:11px}
+ .join{min-height:78px;border-radius:23px}
+ .notice{padding:12px;gap:10px;font-size:12px}
+ .notice-icon{width:38px;height:38px}
+}
+</style>
 
-  <!-- CSS File -->
-  <link rel="stylesheet" href="style.css">
-
-  <!-- Meta Pixel Code -->
-  <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;
-    n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}
-    (window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-
-    fbq('init', '1406374804618570');
-    fbq('track', 'PageView');
-  </script>
-  <!-- End Meta Pixel Code -->
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s){
+if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;
+s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)
+}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','1406374804618570');
+fbq('track','PageView');
+</script>
 </head>
 
 <body>
+<main class="card">
 
-  <main class="card">
-
-    <!-- Profile Photo -->
-    <div class="profile">
-      <div class="profile-inner">
-        <img
-          src="profile.jpg"
-          alt="Trade With Goyal profile"
-          onerror="this.style.display='none';this.nextElementSibling.style.display='block';"
-        >
-        <span class="profile-placeholder" style="display:none;">TWG</span>
-      </div>
+  <div class="logo">
+    <div class="logo-inner">
+      <div style="font-size:43px">📈</div>
+      TWG
+      <small>TRADE WITH GOYAL</small>
     </div>
+    <div class="check">✓</div>
+  </div>
 
-    <!-- Channel Name -->
-    <h1>TRADE WITH GOYAL</h1>
-    <div class="badge">STOCK MARKET EDUCATION</div>
+  <h1>TRADE WITH GOYAL</h1>
+  <div class="badge">STOCK MARKET EDUCATION</div>
 
-    <!-- Feature 1 -->
-    <div class="feature">
-      <div class="icon">✓</div>
-      <div>
-        <h3>Daily Market Updates</h3>
-        <p>Market news, research and educational analysis</p>
-      </div>
+  <div class="feature">
+    <div class="icon">✓</div>
+    <div>
+      <h3>Daily Market Updates</h3>
+      <p>Market news, research and educational analysis</p>
     </div>
+  </div>
 
-    <!-- Feature 2 -->
-    <div class="feature">
-      <div class="icon">⬡</div>
-      <div>
-        <h3>Risk Management First</h3>
-        <p>Learn about market risks and informed decisions</p>
-      </div>
+  <div class="feature">
+    <div class="icon">⬡</div>
+    <div>
+      <h3>Risk Management First</h3>
+      <p>Learn about market risks and informed decisions</p>
     </div>
+  </div>
 
-    <!-- Telegram Button -->
-    <div class="join-wrap">
-      <a
-        class="join"
-        id="telegramJoin"
-        href="https://t.me/+qskH6xrdEdkyYjc1"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <span class="telegram">➤</span>
-        JOIN FREE TELEGRAM NOW
-      </a>
-    </div>
+  <div class="join-wrap">
+    <a class="join" id="telegramJoin"
+       href="https://t.me/+qskH6xrdEdkyYjc1"
+       target="_blank" rel="noopener noreferrer">
+      <span class="telegram">➤</span>
+      JOIN FREE TELEGRAM NOW
+    </a>
+  </div>
 
-    <p class="free-note">
-      🔒 Free to Join • Educational Content
-    </p>
+  <p class="free-note">🔒 Free to Join • Educational Content</p>
 
-    <hr>
+  <hr>
 
-    <!-- Disclaimer -->
-    <div class="disclaimer">
-      <strong>Disclaimer &amp; Safety Notice:</strong>
-      This channel shares stock market information and educational
-      content only. Nothing here guarantees profits or returns.
-      Trading and investing involve financial risk. Please do your
-      own research and consult a qualified financial adviser when
-      needed. This website is not affiliated with, endorsed by,
-      or sponsored by Meta, Facebook, Instagram or Telegram.
-    </div>
+  <div class="disclaimer">
+    <strong>Disclaimer &amp; Safety Notice:</strong>
+    This channel shares stock market information and educational
+    content only. Nothing here guarantees profits or returns.
+    Trading and investing involve financial risk. Please do your
+    own research and consult a qualified financial adviser when
+    needed. This website is not affiliated with, endorsed by,
+    or sponsored by Meta, Facebook, Instagram or Telegram.
+  </div>
 
-    <div class="agency">Trade With Goyal</div>
+  <div class="footer">Trade With Goyal</div>
+</main>
 
-  </main>
+<!-- Decorative community message, not a verified join notification -->
+<div class="notice">
+  <div class="notice-icon">👤</div>
+  <span>Welcome to Trade With Goyal</span>
+  <span class="notice-time">Telegram</span>
+</div>
 
-  <!-- JavaScript File -->
-  <script src="script.js"></script>
-
+<script>
+document.getElementById('telegramJoin').addEventListener('click',function(){
+  if(typeof window.fbq==='function'){
+    fbq('track','Lead');
+    fbq('trackCustom','TelegramJoinClick');
+  }
+});
+</script>
 </body>
 </html>
