@@ -1,17 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#071b1b">
-  <title>Trade With Goyal | Free Telegram Channel</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#071b1b">
+<title>Trade With Goyal</title>
+
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s){
+if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;
+s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)
+}(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','1406374804618570');
+fbq('track','PageView');
+</script>
+
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;padding:20px 12px;color:white;
+ font-family:Arial,sans-serif;
+ background:linear-gradient(145deg,#063c2d,#071421,#064047);
+}
+.card{
+ max-width:600px;margin:auto;padding:28px 18px;
+ border:1px solid #304454;border-radius:28px;
+ background:#101c2c;text-align:center;
+}
+.logo{
+ width:125px;height:125px;margin:0 auto 20px;
+ display:grid;place-items:center;border-radius:50%;
+ border:5px solid #00e6a0;background:#071b2b;
+ color:#ffe600;font-size:28px;font-weight:bold;
+}
+h1{font-size:30px;margin:10px 0}
+.tag{
+ display:inline-block;padding:9px 15px;margin:8px;
+ border:1px solid #9b812f;border-radius:30px;
+ color:#ffe05b;font-size:12px;font-weight:bold;
+}
+.intro{color:#b4c2d0;line-height:1.6;margin:18px 0 25px}
+.feature{
+ padding:17px;margin:13px 0;text-align:left;
+ border:1px solid #29394a;border-radius:18px;
+ background:#142334;
+}
+.feature h3{margin:0 0 8px;font-size:16px}
+.feature p{margin:0;color:#aab8c8;line-height:1.5;font-size:14px}
+.join{
+ display:block;margin-top:25px;padding:22px 10px;
+ border:4px solid white;border-radius:22px;
+ background:#ffe600;color:#080b0c;
+ text-decoration:none;font-size:20px;font-weight:900;
+}
+.small{color:#9caabd;font-size:13px}
+.disclaimer{
+ margin-top:25px;padding-top:20px;
+ border-top:1px solid #334155;
+ color:#94a3b8;font-size:12px;line-height:1.7;
+ text-align:left;
+}
+.toast{
+ position:fixed;left:12px;bottom:12px;
+ width:min(330px,calc(100% - 24px));
+ padding:15px;border:1px solid #00c78b;
+ border-radius:15px;background:#0c1b27;
+ box-shadow:0 8px 25px #0008;
+ opacity:0;transform:translateY(15px);
+ transition:.35s;pointer-events:none;
+}
+.toast.show{opacity:1;transform:translateY(0)}
+.toast strong{color:#00e6a0}
+.toast p{margin:5px 0 0;color:#c2cbd6;font-size:13px}
+</style>
 </head>
+
 <body>
-  <!-- Complete working code ke liye downloaded index.html use karein -->
+<main class="card">
+  <div class="logo">TWG 📈</div>
   <h1>TRADE WITH GOYAL</h1>
-  <p>FREE TELEGRAM CHANNEL</p>
-  <a href="https://t.me/+qskH6xrdEdkyYjc1">
-    JOIN FREE TELEGRAM NOW
+  <div class="tag">FREE TELEGRAM CHANNEL</div>
+
+  <p class="intro">
+    Market insights, trading education and research updates
+    — all in one place.
+  </p>
+
+  <div class="feature">
+    <h3>📈 Market Research & Updates</h3>
+    <p>Market-related information and educational insights.</p>
+  </div>
+
+  <div class="feature">
+    <h3>🛡️ Risk-Aware Learning</h3>
+    <p>Learn about planning and trading risk management.</p>
+  </div>
+
+  <div class="feature">
+    <h3>✦ Free Community Access</h3>
+    <p>Join our Telegram channel for educational content.</p>
+  </div>
+
+  <a class="join"
+     href="https://t.me/+qskH6xrdEdkyYjc1"
+     target="_blank" rel="noopener noreferrer"
+     onclick="if(typeof fbq==='function')fbq('trackCustom','TelegramJoinClick')">
+    ✈ JOIN FREE TELEGRAM NOW
   </a>
+
+  <p class="small">🔒 Free channel access · No joining fee</p>
+
+  <div class="disclaimer">
+    <b>Disclaimer:</b> This page provides educational information only.
+    It is not investment advice or a guarantee of profits.
+    Trading involves risk, including possible loss of capital.
+    Please do your own research.
+  </div>
+</main>
+
+<div class="toast" id="toast" aria-live="polite">
+  <strong id="noticeTitle">Trade With Goyal</strong>
+  <p id="noticeText">Welcome to our community!</p>
+</div>
+
+<script>
+const messages=[
+ ["Trade With Goyal","Welcome to our Telegram community!"],
+ ["Market Updates","Educational market content available."],
+ ["Free Telegram Channel","Tap JOIN to visit our channel."],
+ ["Trading Education","Learn about research and risk management."]
+];
+
+let i=0;
+const toast=document.getElementById("toast");
+
+function showNotice(){
+ document.getElementById("noticeTitle").textContent=messages[i][0];
+ document.getElementById("noticeText").textContent=messages[i][1];
+ toast.classList.add("show");
+ i=(i+1)%messages.length;
+ setTimeout(()=>toast.classList.remove("show"),4000);
+}
+
+setTimeout(()=>{
+ showNotice();
+ setInterval(showNotice,6500);
+},1500);
+</script>
 </body>
 </html>
