@@ -1,92 +1,42 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+const notices = [
+  {
+    title: "Trade With Goyal",
+    text: "Welcome to our Telegram community!"
+  },
+  {
+    title: "Market Updates",
+    text: "Educational market content available."
+  },
+  {
+    title: "Free Telegram Channel",
+    text: "Tap JOIN to visit our channel."
+  },
+  {
+    title: "Trading Education",
+    text: "Learn about research and risk management."
+  }
+];
+
+const notice = document.getElementById("notice");
+const noticeTitle = document.getElementById("notice-title");
+const noticeText = document.getElementById("notice-text");
+
+let index = 0;
+
+function showNotice() {
+  noticeTitle.textContent = notices[index].title;
+  noticeText.textContent = notices[index].text;
+
+  notice.classList.add("show");
+
+  index = (index + 1) % notices.length;
+
+  setTimeout(() => {
+    notice.classList.remove("show");
+  }, 4000);
 }
 
-body{
-    font-family:Arial, sans-serif;
-    background:linear-gradient(135deg,#0f172a,#1e3a8a);
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    padding:20px;
-}
-
-.container{
-    width:100%;
-    max-width:450px;
-}
-
-.card{
-    background:#ffffff;
-    border-radius:18px;
-    padding:35px 25px;
-    text-align:center;
-    box-shadow:0 15px 40px rgba(0,0,0,.25);
-}
-
-h1{
-    color:#111827;
-    font-size:32px;
-    margin-bottom:15px;
-}
-
-.subtitle{
-    color:#4b5563;
-    font-size:17px;
-    margin-bottom:25px;
-    line-height:1.6;
-}
-
-.features{
-    list-style:none;
-    text-align:left;
-    margin-bottom:30px;
-}
-
-.features li{
-    padding:10px 0;
-    font-size:17px;
-    color:#111827;
-}
-
-.join-btn{
-    width:100%;
-    background:#0088cc;
-    color:#fff;
-    border:none;
-    border-radius:10px;
-    padding:16px;
-    font-size:20px;
-    font-weight:bold;
-    cursor:pointer;
-    transition:.3s;
-}
-
-.join-btn:hover{
-    background:#0072ad;
-}
-
-.note{
-    margin-top:20px;
-    color:#16a34a;
-    font-size:15px;
-    font-weight:bold;
-}
-
-@media(max-width:480px){
-    h1{
-        font-size:28px;
-    }
-
-    .subtitle,
-    .features li{
-        font-size:16px;
-    }
-
-    .join-btn{
-        font-size:18px;
-    }
-}
+setTimeout(() => {
+  showNotice();
+  setInterval(showNotice, 6000);
+}, 1500);
