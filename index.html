@@ -185,12 +185,52 @@ fbq('track','PageView');
   <div class="footer">Trade With Goyal</div>
 </main>
 
-<!-- Decorative community message, not a verified join notification -->
-<div class="notice">
-  <div class="notice-icon">👤</div>
-  <span>Welcome to Trade With Goyal</span>
-  <span class="notice-time">Telegram</span>
+<div class="demo-notification">
+  <div class="demo-avatar">S</div>
+  <div class="demo-message">
+    <strong>Demo</strong>
+    <span>Community notification preview</span>
+  </div>
+  <span class="demo-time">Demo</span>
 </div>
+
+<style>
+.demo-notification {
+  max-width: 580px;
+  margin: -52px auto 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 18px;
+  border: 1px solid #075d50;
+  border-radius: 50px;
+  background: #101a2c;
+  color: #eaf0fa;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+.demo-avatar {
+  width: 46px;
+  height: 46px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg,#00d88f,#00d8d8);
+  color: #05221d;
+  font-size: 20px;
+  font-weight: bold;
+}
+.demo-message { flex: 1; line-height: 1.5; }
+.demo-message strong { color: #19db91; margin-right: 4px; }
+.demo-time { color: #71839d; white-space: nowrap; }
+
+@media(max-width:420px) {
+  .demo-notification { gap: 8px; padding: 12px; font-size: 12px; }
+  .demo-avatar { width: 38px; height: 38px; }
+}
+</style>
 
 <script>
 document.getElementById('telegramJoin').addEventListener('click',function(){
